@@ -84,4 +84,4 @@ if __name__ == '__main__':
     use_feats = [c for c in train.columns if c not in ['ID', 'label']]
     sub = build_model(train, test, use_feats, 'label', [], 'kf', is_shuffle=True, use_cart=False)
     sub['label'] = sub['label'].map({0: '围网', 1: '刺网', 2: '拖网'})
-    sub.to_csv('submission.cav', encoding='utf-8', header=None, index=False)
+    sub.to_csv('submission.csv', encoding='utf-8', header=None, index=False)
